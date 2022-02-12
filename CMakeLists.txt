@@ -23,6 +23,7 @@ set_target_properties(YamlCpp PROPERTIES IMPORTED_LOCATION /workspaces/CMakeHell
 
 add_executable(UseYaml useyaml.cpp)
 target_link_libraries(UseYaml PRIVATE YamlCpp)
+target_include_directories(UseYaml PRIVATE /workspaces/CMakeHelloWorld/yaml-cpp/include)
 
 ### ===== eigen ===== ###
 
