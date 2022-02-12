@@ -23,7 +23,15 @@
 # VS Code:
 /.vscode
 
-/build
+build
 
-/eigen
-/yaml-cpp
+yaml-cpp/*
+!yaml-cpp/build
+yaml-cpp/build/*
+!yaml-cpp/build/libyaml-cpp.so
+!yaml-cpp/build/libyaml-cpp.so.0.7
+!yaml-cpp/build/libyaml-cpp.so.0.7.0
+!yaml-cpp/include
+!yaml-cpp/LICENSE
+
+eigen

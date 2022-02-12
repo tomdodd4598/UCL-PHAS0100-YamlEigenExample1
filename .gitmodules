@@ -1,4 +1,0 @@
-[submodule ".devcontainer"]
-	path = .devcontainer
-	url = git@github.com:UCL/rc-cpp-vscode-dev-container.git
-	branch = jd-git-submodule-change
