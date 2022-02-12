@@ -19,11 +19,11 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BinDir})
 ### ===== local build (0.7.0) ===== ###
 
 add_library(YamlCpp SHARED IMPORTED GLOBAL)
-set_target_properties(YamlCpp PROPERTIES IMPORTED_LOCATION /workspaces/CMakeHelloWorld/yaml-cpp/build/libyaml-cpp.so)
+set_target_properties(YamlCpp PROPERTIES IMPORTED_LOCATION ${MyProject_SOURCE_DIR}/yaml-cpp/build/libyaml-cpp.so)
 
 add_executable(UseYaml useyaml.cpp)
 target_link_libraries(UseYaml PRIVATE YamlCpp)
-target_include_directories(UseYaml PRIVATE /workspaces/CMakeHelloWorld/yaml-cpp/include)
+target_include_directories(UseYaml PRIVATE ${MyProject_SOURCE_DIR}/yaml-cpp/include)
 
 ### ===== eigen ===== ###
 
