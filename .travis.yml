@@ -1,0 +1,52 @@
+language: cpp
+sudo: required
+dist: trusty
+
+addons:
+  apt:
+    packages:
+      - cmake
+  homebrew:
+    packages:
+      - cmake
+
+matrix:
+  fast_finish: true
+  include:
+    # Builds for MacOS
+    - os: osx
+      osx_image: xcode8
+      env:
+        - EXTRA_CMAKE_ARGS="-DCMAKE_OSX_DEPLOYMENT_TARGET:STRING=10.7"
+    # Builds for Linux
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.9
+      env:
+         - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
+
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-7
+      env:
+        - MATRIX_EVAL="CC=gcc-7 && CXX=g++-7"
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+
+script: |
+  pwd
+  echo "$PATH"
+  cmake --version
+  mkdir build
+  cd build
+  cmake ${EXTRA_CMAKE_ARGS} ..
+  make
