@@ -3,7 +3,7 @@ version: "{build}"
 init:
   - git config --global core.autocrlf input
 
-clone_folder: c:\projects\CMakeHelloWorld
+clone_folder: c:\projects\YamlEigenExample1
 
 shallow_clone: false
 

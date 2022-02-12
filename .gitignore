@@ -20,6 +20,8 @@
 # CLion/IntelliJ
 *cmake-build-debug
 .idea/*
+# VS Code:
+/.vscode
 
 /build
 
