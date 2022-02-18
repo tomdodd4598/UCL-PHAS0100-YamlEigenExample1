@@ -1,0 +1,20 @@
+{
+    "star": "Tau Ceti",
+    "model": "SSM",
+    "age": 5.8,
+    "distance": 11.9,
+    "classification": "G8V",
+    "coordinates": {
+        "RA": [
+            1,
+            44,
+            4.1
+        ],
+        "Dec": [
+            -15,
+            56,
+            15
+        ]
+    },
+    "metallicity": 0.12345679
+}
