@@ -1,6 +1,6 @@
 #include <iostream>
 #include <Eigen/Dense>
- 
+
 int main() {
 
     Eigen::Matrix2d m(2, 2);

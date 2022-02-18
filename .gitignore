@@ -28,10 +28,12 @@ build
 yaml-cpp/*
 !yaml-cpp/build
 yaml-cpp/build/*
-!yaml-cpp/build/libyaml-cpp.so
-!yaml-cpp/build/libyaml-cpp.so.0.7
-!yaml-cpp/build/libyaml-cpp.so.0.7.0
+!yaml-cpp/build/libyaml-cpp.so*
 !yaml-cpp/include
 !yaml-cpp/LICENSE
+!yaml-cpp/README.md
 
-eigen
+eigen/*
+!eigen/Eigen
+!eigen/COPYING*
+!eigen/README.md
